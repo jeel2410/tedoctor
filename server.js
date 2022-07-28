@@ -6,8 +6,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+require('dotenv').config()
 
-const MongoDBURI = process.env.MONGO_URI || 'mongodb+srv://jeel:Jeel@123@cluster0.bcua6.mongodb.net/?retryWrites=true&w=majority';
+
+const MongoDBURI = process.env.MONGO_URI
 
 mongoose.connect(MongoDBURI, {
   useUnifiedTopology: true,
