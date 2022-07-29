@@ -1,7 +1,10 @@
 const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
+const cors = require('cors')
 const app = express();
+app.use(cors())
+
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
